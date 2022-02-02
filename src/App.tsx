@@ -9,7 +9,7 @@ import Scene from './Scene'
 
 const isDark = false
 
-const App: React.FunctionComponent<any> = (props) => {
+const App: React.FunctionComponent<any> = () => {
   // This spring controls the background and the svg fill (text color)
   const [{ background, fill }, set] = useSpring({ background: isDark ? '#202020' : '#f0f0f0', fill: isDark ? '#f0f0f0' : '#202020' }, [])
 
