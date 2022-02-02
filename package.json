@@ -1,0 +1,36 @@
+{
+  "name": "wobbling-sphere",
+  "version": "0.0.0",
+  "main": "src/index.js",
+  "dependencies": {
+    "@react-spring/three": "9.4.2",
+    "@react-three/drei": "8.8.1",
+    "@react-three/fiber": "7.0.26",
+    "is-mobile": "^3.0.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-scripts": "5.0.0",
+    "three": "0.137.5"
+  },
+  "devDependencies": {
+    "husky": "7.0.4",
+    "lint-staged": "12.3.3",
+    "prettier": "^2.5.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "prepare": "husky install"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "lint-staged": {
+    "*.{js,css,md}": "prettier --write"
+  }
+}
