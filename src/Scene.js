@@ -12,7 +12,7 @@ const AnimatedMaterial = a(MeshDistortMaterial)
 export default function Scene({ setBg }) {
   const sphere = useRef()
   const light = useRef()
-  const [mode, setMode] = useState(false)
+  const [mode, setMode] = useState(true)
   const [down, setDown] = useState(false)
   const [hovered, setHovered] = useState(false)
 
@@ -48,7 +48,7 @@ export default function Scene({ setBg }) {
       coat: mode && !hovered ? 0.04 : 1,
       ambient: mode && !hovered ? 1.5 : 0.5,
       env: mode && !hovered ? 0.4 : 1,
-      color: hovered ? '#E8B059' : mode ? '#202020' : 'white',
+      color: hovered ? '#E8B059' : mode ? 'white' : '#202020',
       config: (n) => n === 'wobble' && hovered && { mass: 2, tension: 1000, friction: 10 }
     },
     [mode, hovered, down]

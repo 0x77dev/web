@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import { useSpring } from '@react-spring/core'
@@ -6,9 +6,11 @@ import { a } from '@react-spring/web'
 import Overlay from './Overlay'
 import Scene from './Scene'
 
+const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+
 export default function App() {
   // This spring controls the background and the svg fill (text color)
-  const [{ background, fill }, set] = useSpring({ background: '#f0f0f0', fill: '#202020' }, [])
+  const [{ background, fill }, set] = useSpring({ background: isDark ? '#202020' : '#f0f0f0', fill: isDark ? '#f0f0f0' : '#202020' }, [])
 
   return (
     <a.main onDoubleClick={() => location.replace('/links')} style={{ background }}>
