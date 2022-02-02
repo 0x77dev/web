@@ -1,3 +1,5 @@
+/* eslint-disable react/no-children-prop */
+// eslint-disable-next-line no-use-before-define
 import React from 'react'
 import { a } from '@react-spring/web'
 
@@ -24,6 +26,6 @@ const Overlay: React.FunctionComponent<any> = ({ fill }) => {
       </a.svg>
     </div>
   )
-};
+}
 
-export default Overlay;
+export default Overlay

@@ -1,4 +1,5 @@
 import * as THREE from 'three'
+// eslint-disable-next-line no-use-before-define
 import React, { Suspense, useEffect, useState, useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
 import { PerspectiveCamera, Environment, MeshDistortMaterial, ContactShadows } from '@react-three/drei'
@@ -153,8 +154,9 @@ const Scene: React.FunctionComponent<any> = ({ setBg }) => {
         getEffectiveFOV={undefined}
         getFilmWidth={undefined}
         getFilmHeight={undefined}
-        setLens={undefined}>
-        {/* 
+        setLens={undefined}
+      >
+        {/*
             //@ts-ignore */}
         <a.ambientLight intensity={ambient} />
         <a.pointLight ref={light} position-z={-15} intensity={env} color="#F8C069" />
@@ -171,14 +173,15 @@ const Scene: React.FunctionComponent<any> = ({ setBg }) => {
             // Toggle mode between dark and bright
             setMode(!mode)
             setBg({ background: !mode ? '#202020' : '#f0f0f0', fill: !mode ? '#f0f0f0' : '#202020' })
-          }}>
+          }}
+        >
           <sphereBufferGeometry args={[1, 64, 64]} />
-          {/* 
+          {/*
             //@ts-ignore */}
           <AnimatedMaterial color={color} envMapIntensity={env} clearcoat={coat} clearcoatRoughness={0} metalness={0.1} />
         </a.mesh>
         <Environment preset="warehouse" />
-        {/* 
+        {/*
             //@ts-ignore */}
         <ContactShadows
           rotation={[Math.PI / 2, 0, 0]}
@@ -192,6 +195,6 @@ const Scene: React.FunctionComponent<any> = ({ setBg }) => {
       </Suspense>
     </>
   )
-};
+}
 
-export default Scene;
+export default Scene

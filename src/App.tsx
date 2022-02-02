@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-use-before-define
 import React from 'react'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
@@ -6,10 +7,9 @@ import { a } from '@react-spring/web'
 import Overlay from './Overlay'
 import Scene from './Scene'
 
-// const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches
 const isDark = false
 
-export default function App() {
+const App: React.FunctionComponent<any> = (props) => {
   // This spring controls the background and the svg fill (text color)
   const [{ background, fill }, set] = useSpring({ background: isDark ? '#202020' : '#f0f0f0', fill: isDark ? '#f0f0f0' : '#202020' }, [])
 
@@ -23,3 +23,5 @@ export default function App() {
     </a.main>
   )
 }
+
+export default App
