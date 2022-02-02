@@ -1,7 +1,7 @@
 import React from 'react'
 import { a } from '@react-spring/web'
 
-export default function Overlay({ fill }) {
+const Overlay: React.FunctionComponent<any> = ({ fill }) => {
   return (
     <div className="overlay">
       <a.svg viewBox="0 0 583 720" fill={fill} xmlns="http://www.w3.org/2000/svg">
@@ -24,4 +24,6 @@ export default function Overlay({ fill }) {
       </a.svg>
     </div>
   )
-}
+};
+
+export default Overlay;

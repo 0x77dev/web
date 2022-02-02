@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import { useSpring } from '@react-spring/core'
@@ -6,7 +6,8 @@ import { a } from '@react-spring/web'
 import Overlay from './Overlay'
 import Scene from './Scene'
 
-const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+// const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+const isDark = false
 
 export default function App() {
   // This spring controls the background and the svg fill (text color)
