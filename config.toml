@@ -62,8 +62,8 @@ paginate = 5
   [languages.en]
     languageName = "English"
     title = "Mykhailo Marynenko"
-    subtitle = "A simple, retro theme for Hugo"
-    owner = "Mykhailo Marynenko"
+    subtitle = "I'm developing high-load cloud solutions for business needs."
+    owner = "Mykhailo Marynenko <0x77dev@protonmail.com>"
     keywords = "security,web,fullstack,development,peering,decentalized,open-source,reverse-engineering,smart-home"
     copyright = "Mykhailo Marynenko"
     menuMore = "Show more"
