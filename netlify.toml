@@ -33,3 +33,10 @@ HUGO_ENABLEGITINFO = "true"
 from = "/npmjs/*"
 to = "/npmjs/"
 status = 200
+
+[[headers]]
+  for = "/.well-known/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    Access-Control-Allow-Origin = "*"
